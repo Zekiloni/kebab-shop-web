@@ -60,7 +60,7 @@
       height: 60%;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: center; 
       padding: 50px;
    }
 
