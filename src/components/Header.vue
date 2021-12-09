@@ -48,7 +48,7 @@
 
    .header { 
       width: 100%;
-      height: 100vh;
+      height: 65vh;
       position: relative;
       display: flex;
       justify-content: center;
@@ -56,6 +56,15 @@
       flex-wrap: wrap;
    }
 
+   .header::before { 
+      content: '';
+      position: absolute;
+      top: 250px;
+      width: 100%;
+      opacity: 0.5;
+      height: 350px;
+      background: url('../assets/images/hr_bg_1.png') no-repeat center;
+   }
 
    .box { 
       width: 40%;
@@ -85,7 +94,7 @@
       color: white;
       flex-direction: column;
       align-items: flex-start;
-      animation: zoom-in 1s ease;
+      animation: zoom-in 0.5s ease;
       border-radius: 25px;
       position: relative;
       z-index: 2;
@@ -116,14 +125,17 @@
    }
 
    @keyframes zoom-in {
-      from { width: 225px; height: 225px; border-radius: 100%; }
-      to {  width: 40%; height: 60%; border-radius: 25px; }
+      from { opacity: 0; border-radius: 100%; }
+      to { opacity: 1; }
    }
 
 
    @media only screen and (max-width: 600px) {
+      .header { height: auto; }
+      .header::before { display: none; }
       .box { height: auto; width: auto; margin: 20px; }
-      .box img.logo { width: 350px; }
+      .box a.logo img { width: 300px; }
+      .box.description h2.title { font-size: 1.7rem; }
    }
 
    

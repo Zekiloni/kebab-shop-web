@@ -15,8 +15,11 @@ export const Constants = {
    LOCATED_IN: 'Nalazimo se u ',
 
 
-   DESCRIPTION_TITLE: 'Proizvodnja i veleprodaja pripremljenog mesa',
-   DESCRIPTION_TEXT: 'Mi smo mali porodični lanac restorana, koji neguje isključivo tursku nacionalnu kuhinju – jela sa roštilja.Veoma smo posvećeni poslu koji radimo. Pažljivi odabir namirnica, iskustvo i dobra usluga, nam daju za pravo da očekujemo da ćete nam doći ponovo i da ćemo mi uvek biti vaš izbor. U izradi rostilja i priloga, koristimo vrhunske sastojke: meso domaćih proizvođača, sveže povrće, svež pomfrit od krompira najkvalitetnije svetske začine koji mnogi od njih ne mogu naci u Srbiji. Pružamo usluge keteringa, a od nedavno smo uveli i onlajn servis za dostavu. Naš cilj  je pružanje najkvalitetnije moguće usluge, a (ime) je vremenom postao sinonim za kvalitet i ukus Turske.',
+   DESCRIPTION_TITLE: 'Proizvodnja i veleprodaja pripremljenog mesa za turski doner - kebab',
+   DESCRIPTION_TEXT: 'Mi smo mali porodični lanac restorana, koji neguje isključivo tursku nacionalnu kuhinju – jela sa roštilja. Veoma smo posvećeni poslu koji radimo. Pažljivi odabir namirnica, iskustvo i dobra usluga, nam daju za pravo da očekujemo da ćete nam doći ponovo i da ćemo mi uvek biti vaš izbor. U izradi rostilja i priloga, koristimo vrhunske sastojke: meso domaćih proizvođača, sveže povrće, svež pomfrit od krompira najkvalitetnije svetske začine koji mnogi od njih ne mogu naci u Srbiji. Pružamo usluge keteringa, a od nedavno smo uveli i onlajn servis za dostavu. Naš cilj  je pružanje najkvalitetnije moguće usluge, a (ime) je vremenom postao sinonim za kvalitet i ukus Turske.',
+
+
+   HALAL_TEXT: 'U procesu proizvodnje strogo poštujemo sve halal standarde i koristimo samo sastojke sa halal sertifikatom, kako bismo bili sigurni da su naši proizvodi prikladni za pripadnike Islamske zajednice.',
 
    // PROMO_TITLE: 'Savršenstvo ukusa',
    // PROMO_SUBTITLE: 'Najbolji kebab ili giros po turskom receptu.',
@@ -30,7 +33,6 @@ export const Constants = {
    // PAGE_CONTACT: 'Kontakt',
 
    // HALAL_TITLE: 'Halal',
-   // HALAL_TEXT: 'U procesu proizvodnje strogo poštujemo sve halal standarde i koristimo samo sastojke sa halal sertifikatom, kako bismo bili sigurni da su naši proizvodi prikladni za pripadnike Islamske zajednice.',
 
    // WARRANTY_TITLE: 'Prirodno, provereno',
    // WARRANTY_TEXT: 'Sarađujemo isključivo sa proverenim dobavljačima, koji strogo poštuju HACCP i HALAL standarde i uzgajaju sastojke na prirodan i ekološki način, bez upotrebe aditiva koji su štetni ili nezdravi za ljude i životinje.',
