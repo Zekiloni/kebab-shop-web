@@ -3,7 +3,6 @@
 
 <template>
    <div class="footer"> 
-
        <div class="socials"> 
            <h3> {{ Constants.VISIT_US_ON_SOCIAL }} </h3>
            <a :href="Constants.FACEBOOK_LINK"> <div class="icon instagram"></div> </a>

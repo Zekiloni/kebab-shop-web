@@ -50,6 +50,7 @@
         margin-top: 70px;
         list-style: none;
         padding: 0;
+        flex-wrap: wrap;
         position: relative;
         display: flex;
         justify-content: space-around;
@@ -78,6 +79,13 @@
         height: 110px;
         text-align: justify;
         color: grey;
+        font-size: 0.8rem;
+    }
+
+    li:hover { cursor: pointer; }
+
+    li:hover h3.number {
+        filter: brightness(1.25);
     }
     
     li h3.number {
@@ -86,6 +94,7 @@
         height: 50px;
         width: 50px;
         font-size: 1.15rem;
+        transition: all .3s ease;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -96,6 +105,7 @@
     }
 
     @media only screen and (max-width: 600px) {
-   }
+        ul.steps::before { display: none; } 
+    }
 
 </style>

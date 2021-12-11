@@ -9,9 +9,9 @@
             </div>
         </div>
 
-        <div class="contact">
+        <!-- <div class="contact">
             <h2 class="title"> {{ Constants.CONTACT_TITLE }} </h2>
-        </div>
+        </div> -->
     </div>
 
 </template>

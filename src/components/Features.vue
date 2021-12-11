@@ -121,7 +121,7 @@
 
    @media only screen and (max-width: 600px) {
       .features { width: 100%; }
-      .features .feature { width: 100%; margin: 15px 0; }
+      .features .feature { width: 100%; margin: 15px 0; border-radius: 15px; }
    }
 
    
