@@ -3,28 +3,36 @@
 
 <template>
    <div class="features">
-      <div class="feature clean-bg" v-on:click="setActive('hccp')">
-         <div class="hider" v-bind:class="{ active: isActive('hccp') }"> 
-            <div class="icon clean"> </div> 
+      <div class="feature clean">
+         <div class="icon-holder"> 
+            <div class="icon"> </div> 
          </div>
-         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque a dui vitae semper. Donec non diam imperdiet, aliquam augue id, efficitur dui. Aliquam aliquet massa sed fringilla elementum. Cras scelerisque est a ligula laoreet commodo sit amet quis velit. Proin arcu est, tempus sed ex ac, sagittis hendrerit tortor. </p>
+         <h3> {{ Constants.CLEAN_TITLE }} </h3>
+         <p> {{ Constants.CLEAN_TEXT }} </p>
       </div>
 
-      <div class="feature tasty-bg" v-on:click="setActive('taste')">
-         <div class="hider" v-bind:class="{ active: isActive('taste') }">
-            <div class="icon tasty"> </div>
-            <i class="fas fa-angle-double-right"></i>
-
-
+      <div class="feature tasty">
+         <div class="icon-holder"> 
+            <div class="icon"> </div> 
          </div>
-         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque a dui vitae semper. Donec non diam imperdiet, aliquam augue id, efficitur dui. Aliquam aliquet massa sed fringilla elementum. Cras scelerisque est a ligula laoreet commodo sit amet quis velit. Proin arcu est, tempus sed ex ac, sagittis hendrerit tortor. </p>
+         <h3> {{ Constants.TASTE_TITLE }} </h3>
+         <p> {{ Constants.TASTE_TEXT }} </p>
       </div>
 
-      <div class="feature halal-bg" v-on:click="setActive('halal')">
-         <div class="hider" v-bind:class="{ active: isActive('halal') }">
-            <div class="icon halal"> </div>
+      <div class="feature halal">
+         <div class="icon-holder"> 
+            <div class="icon"> </div> 
          </div>
+         <h3> {{ Constants.HALAL_TITLE }} </h3>
          <p> {{ Constants.HALAL_TEXT }} </p>
+      </div>
+
+      <div class="feature meat">
+         <div class="icon-holder"> 
+            <div class="icon"> </div> 
+         </div>
+         <h3> {{ Constants.MEAT_TITLE }} </h3>
+         <p> {{ Constants.MEAT_TEXT }} </p>
       </div>
    </div>
 </template>
@@ -35,35 +43,7 @@
    export default { 
       data () { 
          return { 
-            Constants,
-            States: { 
-               'hccp': false,
-               'taste': false,
-               'halal': false
-            }
-         }
-      },
-
-      mounted () { 
-         console.log(this.isMobile());
-      },
-
-      methods: { 
-
-         isActive: function (i) { 
-            return this.States[i];
-         },
-
-         setActive: function (i) {
-            let Current = this.States[i];
-            for (let i in this.States) { 
-               this.States[i] = false;
-            }
-            this.States[i] = !Current;
-         },
-
-         isMobile : function () {
-            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? true : false;
+            Constants
          }
       }
    }
@@ -73,8 +53,10 @@
 <style scoped>
 
    .features { 
-      width: auto;
-      margin: 0 auto;
+      width: 100%;
+      margin: 0 auto;      
+      background: url('../assets/images/factory_bg.png');
+      padding: 40px 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -83,59 +65,63 @@
    }
 
    .feature { 
-      position: relative;
-      width: 275px;
-      border-radius: 15px;
-      height: 275px;
-      transition: all .3s ease;
+      width: 300px;
+      height: 350px;
       display: flex;
-      margin: 15px;
-      justify-content: center;
+      flex-direction: column;
+      margin: 45px;
+      padding: 25px;
+      transition: all .3s ease;
+      border-radius: 25px;
+      /* box-shadow: 0 10px 20px 0px rgb(0 0 0 / 5%); */
       align-items: center;
-      box-shadow: 0 2px 5px rgb(0 0 0 / 5%), 0 8px 16px rgb(0 0 0 / 5%);
+      /* justify-content: center; */
+      background: rgb(0 0 0 / 65%);
    }
 
    .feature:hover { 
       cursor: pointer;
-   }
-   
-   .feature .hider { 
-      transition: all .4s ease;
-      top: 0;
-      left: 0;
-      position: absolute;
-      border-radius: 15px;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      overflow: hidden;
-      justify-content: center;
-      align-items: center;
+      transform: scale(1.05);
    }
 
-   .hider.active { 
-      height: 0
+   .feature:hover .icon-holder {
+      filter: brightness(1.15);
    }
 
-   .icon { width: 95px; height: 95px; background: white; }
-   .icon.halal { -webkit-mask: url('../assets/images/icons/halal.svg') no-repeat center; mask: url('../assets/images/icons/halal.svg') no-repeat center; mask-size: cover; }
-   .icon.tasty { -webkit-mask: url('../assets/images/icons/tasty.svg') no-repeat center; mask: url('../assets/images/icons/tasty.svg') no-repeat center; mask-size: cover; }
-   .icon.clean { -webkit-mask: url('../assets/images/icons/fresh.svg') no-repeat center; mask: url('../assets/images/icons/fresh.svg') no-repeat center; mask-size: cover; background: tomato; }
+   .feature h3 { 
+      margin-top: 35px;
+      font-size: 1.45rem;
+      font-weight: 200;
+      color: whitesmoke;
+   }
 
    .feature p { 
       width: 90%;
-      text-align: justify;
-      color: rgb(117, 117, 117);
-      font-weight: 600;
+      text-align: center;
+      color: #e1e1e1;
+      font-weight: 100;
+      letter-spacing: 0.25px;
+      line-height: 1.05rem;
+      font-size: 0.8rem;
    }
 
-   .clean-bg .hider { background: rgb(245, 245, 245); box-shadow: 0 0 70px 0 rgb(245 245 245 / 25%); }
-   .halal-bg .hider { background: rgb(125, 206, 130); box-shadow: 0 0 70px 0 rgb(125 206 130 / 25%); }
-   .tasty-bg .hider { background: rgb(255, 99, 71); box-shadow: 0 0 70px 0 rgb(255 99 71 / 25%); }
+   .icon-holder { padding: 35px; border-radius: 100%; transition: all .3s ease; }
+
+   .clean .icon-holder { background: linear-gradient(45deg, rgb(0 193 240), rgb(190 232 228)); box-shadow: 0 0 0px 10px rgb(0 193 240 / 25%); }
+   .halal .icon-holder { background: linear-gradient(45deg, rgb(125, 206, 130), rgb(180 255 185)); box-shadow: 0 0 0px 10px rgb(125 206 130 / 25%); }
+   .tasty .icon-holder { background: linear-gradient(45deg, rgb(255, 99, 71), rgb(253 159 142)); box-shadow: 0 0 0px 10px rgb(255 99 71 / 25%); }
+   .meat .icon-holder { background: linear-gradient(45deg, rgb(106 48 26), rgb(201 101 63)); box-shadow: 0 0 0px 10px rgb(125 58 33 / 25%); }
+
+   .icon-holder .icon { width: 80px; height: 80px; background: white;  }
+   .halal .icon-holder .icon { -webkit-mask: url('../assets/images/icons/halal.svg') no-repeat center; mask: url('../assets/images/icons/halal.svg') no-repeat center; mask-size: cover; }
+   .tasty .icon-holder .icon { -webkit-mask: url('../assets/images/icons/tasty.svg') no-repeat center; mask: url('../assets/images/icons/tasty.svg') no-repeat center; mask-size: cover; }
+   .clean .icon-holder .icon { -webkit-mask: url('../assets/images/icons/fresh.svg') no-repeat center; mask: url('../assets/images/icons/fresh.svg') no-repeat center; mask-size: cover; }
+   .meat .icon-holder .icon { -webkit-mask: url('../assets/images/icons/chicken.svg') no-repeat center; mask: url('../assets/images/icons/chicken.svg') no-repeat center; mask-size: cover; }
 
 
    @media only screen and (max-width: 600px) {
-      .history p { width: auto; }
+      .features { width: 100%; }
+      .features .feature { width: 100%; margin: 15px 0; }
    }
 
    

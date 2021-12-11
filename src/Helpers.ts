@@ -6,6 +6,10 @@ const Helpers = {
       return (str.length > n) ? str.substr(0, n-1) + '...' : str; 
    },
 
+   isMobile : function (navigator: Navigator) {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? true : false;
+   },
+
    Dollars (i: number) { 
       return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(i); 
    },

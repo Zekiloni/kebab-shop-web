@@ -11,7 +11,7 @@
 
       <div class="box description">
          <h2 class="title"> {{ Constants.DESCRIPTION_TITLE }} </h2>
-         <p> {{ Constants.DESCRIPTION_TEXT }} </p>
+          <p> {{ Constants.DESCRIPTION_TEXT }} </p>
       </div>
 
    </div>
@@ -54,16 +54,9 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-   }
-
-   .header::before { 
-      content: '';
-      position: absolute;
-      top: 250px;
-      width: 100%;
-      opacity: 0.5;
-      height: 350px;
-      background: url('../assets/images/hr_bg_1.png') no-repeat center;
+      background: url('../assets/images/chicken_bg.png');
+      /* background-size: cover; */
+      box-shadow: 0 10px 20px 0px rgb(0 0 0 / 5%);
    }
 
    .box { 
@@ -72,7 +65,6 @@
       display: flex;
       justify-content: center;
       align-items: center; 
-      padding: 50px;
    }
 
    a.logo { 
@@ -81,41 +73,47 @@
       transition: all .3s ease;
    }
 
-   a.logo:hover { opacity: 0.4; }
+   a.logo:hover img { opacity: 0.4; }
    
    a.logo img { 
       width: 500px;
+      transition: all .3s ease;
       animation: slide-in 2.5s ease;
    }
 
    .box.description {
-      background: url('../assets/images/food-pattern.png') repeat, #ffcc00;
-      box-shadow: 0 0 100px 0 rgb(255 204 0 / 15%);
-      color: white;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       animation: zoom-in 0.5s ease;
-      border-radius: 25px;
       position: relative;
+      background: rgb(0 0 0 / 65%);
       z-index: 2;
+      height: 90%;
       overflow: hidden;
+      border-radius: 25px;
       transition: all 0.3s ease;
    }
-      
+
    .box.description h2.title { 
+      width: 90%;
       font-size: 2.2rem;
       text-transform: uppercase;
+      color: white;
       letter-spacing: 1.25px;
    }
 
-   .box.box.description:hover { 
-      box-shadow: 0 0 120px 0 rgb(255 204 0 / 15%);
+   .box.description h3 { 
+      font-size: 27px; 
+      color: whitesmoke;
+      text-transform: uppercase;
    }
 
    .box.description p { 
-      color: rgb(17, 17, 17);
+      color: rgb(255 255 255 / 80%);
+      letter-spacing: 0.6px;
       font-size: 0.95rem;
-      font-weight: 400;
+      font-weight: 100;
+      width: 90%;
       text-align: justify;
    }
 
@@ -133,8 +131,10 @@
    @media only screen and (max-width: 600px) {
       .header { height: auto; }
       .header::before { display: none; }
-      .box { height: auto; width: auto; margin: 20px; }
+      .box { height: auto; width: auto; margin: 0; padding: 10px 15px;}
       .box a.logo img { width: 300px; }
+      .box.description { width: 100%; border-radius: 0; }
+      .box.description p { width: 95%; }
       .box.description h2.title { font-size: 1.7rem; }
    }
 

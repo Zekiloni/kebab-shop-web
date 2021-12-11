@@ -3,9 +3,11 @@
 
    <div id="app">
       <Header />
+      <Production />
       <Features />
-     <!-- <About />
       <Order />
+
+      <!-- <About />
       <Footer /> -->
    </div>
 
@@ -18,14 +20,15 @@
    import { Constants } from './Globals';
 
    import Header from './components/Header.vue';
+   import Production from './components/Production.vue';
    import Features from './components/Features.vue';
-   import Order from './components/Order.vue';
+   import Order from './components/Order_Contact.vue';
    import Footer from './components/Footer.vue';
 
    export default { 
 
       components: { 
-         Header, Features, Order, Footer
+         Header, Production, Features, Order, Footer
       },
 
       data () { 

@@ -15,7 +15,7 @@ body {
 
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: #eeeeee; }
-::-webkit-scrollbar-thumb { background: #ff6602; }
+::-webkit-scrollbar-thumb { background: #bc0d27; }
 
 @keyframes slide-top {
    0% { transform: translateY(-300px); }
