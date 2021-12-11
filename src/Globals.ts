@@ -17,6 +17,8 @@ export const Constants = {
    DESCRIPTION_TITLE: 'Proizvodnja i veleprodaja pripremljenog mesa za turski doner - kebab',
    DESCRIPTION_TEXT: 'Mi smo mali lanac restorana, koji neguje isključivo tursku tradicionalnu kuhinju – jela sa roštilja. Veoma smo posvećeni poslu koji radimo. Pažljivi odabir namirnica, iskustvo i dobra usluga, nam daju za pravo da očekujemo da ćete nam doći ponovo i da ćemo mi uvek biti vaš izbor. U izradi rostilja i priloga, koristimo vrhunske sastojke: meso domaćih proizvođača, sveže povrće, svež pomfrit od krompira najkvalitetnije svetske začine koji mnogi od njih ne mogu naci u Srbiji. Pružamo usluge keteringa, a od nedavno smo uveli i onlajn servis za dostavu. Naš cilj  je pružanje najkvalitetnije moguće usluge, a (ime) je vremenom postao sinonim za kvalitet i ukus Turske.',
 
+   PRODUCTION_TITLE: 'Proces Proizvodnje',
+
    CLEAN_TITLE: 'Naši Standardi',
    TASTE_TITLE: 'Savršen Ukus',
    HALAL_TITLE: 'Halal Standardi',
@@ -34,9 +36,10 @@ export const Constants = {
    ],
 
    PRODUCTION_PROCESS: [
-      'Proizvodni proces striktno poštuje halal standarde koristeći samo sastojke koji poseduju halal sertifikate kako bi se na ovaj način obezbedila usaglašenost naših proizvoda i za pripadnike Islamske zajednice.',
       'Sveže meso se priprema i ručno formira u odreske ili kriške koje se zatim mašinski stanji i omekša kako bi kuvani doner ćevapi bili ukusniji.',
-      'Marinada se sastoji od vode i raznih mešavina začina; može se u potpunosti prilagoditi vašim željama i zadovoljiti kako vaš ukus tako i ukus vaših kupaca.'
+      'Marinada se sastoji od vode i raznih mešavina začina; može se u potpunosti prilagoditi vašim željama i zadovoljiti kako vaš ukus tako i ukus vaših kupaca.',
+      'Na rotirajućim stalcima, sastavljeni i oblikovani doner ćevapi se umotavaju u plastičnu foliju i obeležavaju odgovarajućim oznakama i postavljaju na transportna kolica, gde proizvodi odlaze u šok komoru.',
+      'Smrznute doner ćevape čuvamo u zamrzivaču na -18 ° C. Rok trajanja takvog skladištenja je najmanje godinu dana od datuma proizvodnje i zamrzavanja. Zamrznuti doner ćevapi, umotani u plastičnu foliju i/ili u paletne kartonske kutije pogodne za transport, mogu se dostaviti na adresu kupca, ali kupci mogu i sami da ih preuzmu i sami se pobrinu za prevoz.'
    ],
 
    CONTACT_TITLE: 'Kontakt Informacije',
